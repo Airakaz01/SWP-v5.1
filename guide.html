@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guide utilisateur · Smart Warehousing Platform v5.1</title>
+  <meta name="description" content="Guide utilisateur illustré de la Smart Warehousing Platform v5.1 : accès, fichiers Excel, workflows, historique, exports.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/deck.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" title="Toutes les présentations">
+      <span class="brand-mark"><i class="fas fa-warehouse"></i></span>
+      <span>SWP v5.1<small>Présentations</small></span>
+    </a>
+    <nav class="deck-tabs" aria-label="Présentations">
+      <a href="details.html">Présentation détaillée</a>
+      <a href="one-slide.html">One-slide</a>
+      <a href="guide.html" aria-current="page">Guide utilisateur</a>
+    </nav>
+    <div class="controls">
+      <button class="ctl" id="menuBtn" aria-haspopup="true" aria-expanded="false" title="Liste des slides"><i class="fas fa-list"></i></button>
+      <button class="ctl" id="prevBtn" title="Précédente (←)" aria-label="Slide précédente"><i class="fas fa-chevron-left"></i></button>
+      <span class="counter" id="counter" aria-live="polite">1 / 12</span>
+      <button class="ctl" id="nextBtn" title="Suivante (→)" aria-label="Slide suivante"><i class="fas fa-chevron-right"></i></button>
+      <button class="ctl" id="printBtn" title="Imprimer / PDF"><i class="fas fa-file-pdf"></i></button>
+      <button class="ctl" id="fullBtn" title="Plein écran (F)"><i class="fas fa-expand"></i></button>
+    </div>
+    <nav class="slide-menu" id="slideMenu" hidden aria-label="Slides"></nav>
+    <div class="progress" id="progress"></div>
+  </header>
+
+  <main class="viewport">
+    <div class="stage">
+
+      <!-- 1 · Couverture -->
+      <section class="slide cover" data-title="Guide utilisateur">
+        <div class="cover-inner" style="top: 150px;">
+          <p class="kicker">GUIDE UTILISATEUR</p>
+          <h1>Smart Warehousing Platform</h1>
+          <p class="tagline" style="margin-top: 18px;">Manuel d'utilisation de la plateforme avant-projet logistique</p>
+          <p class="sub" style="font-size: 17px; margin-top: 22px;">Capacity Analysis · Kitting Rack Dimensioning · Kitting Rack Layout · Historique</p>
+        </div>
+        <div class="cover-rule" style="top: 498px;"></div>
+        <div class="cover-by" style="top: 534px;">
+          <strong>Rédigé par EL HOUARI ZAKARIA</strong>
+          <span>Capgemini Engineering - Maroc · Version 5.1</span>
+        </div>
+      </section>
+
+      <!-- 2 · Sommaire -->
+      <section class="slide" data-title="Sommaire">
+        <header class="sl-head"><div><h2>Sommaire</h2></div></header>
+        <div class="sl-body" style="padding-top: 30px;">
+          <ol class="toc">
+            <li><b>1.</b><a href="#3">À propos de la plateforme</a><span>p. 3</span></li>
+            <li><b>2.</b><a href="#4">Accès &amp; repères d'interface</a><span>p. 4</span></li>
+            <li><b>3.</b><a href="#5">Préparer les fichiers Excel</a><span>p. 5</span></li>
+            <li><b>4.</b><a href="#6">Domaine 1 - Capacity Analysis</a><span>p. 6</span></li>
+            <li><b>5.</b><a href="#7">Domaine 2 - Kitting Rack Dimensioning</a><span>p. 7</span></li>
+            <li><b>6.</b><a href="#8">Domaine 3 - Kitting Rack Layout (implantation, 3D)</a><span>p. 8-9</span></li>
+            <li><b>7.</b><a href="#10">Historique, jeux de paramètres &amp; exports</a><span>p. 10-11</span></li>
+            <li><b>8.</b><a href="#12">Dépannage &amp; glossaire</a><span>p. 12</span></li>
+          </ol>
+        </div>
+        <footer class="sl-foot"><span>Guide utilisateur - Smart Warehousing Platform · EL HOUARI ZAKARIA</span><span>2</span></footer>
+      </section>
+
+      <!-- 3 · À propos -->
+      <section class="slide" data-title="À propos de la plateforme">
+        <header class="sl-head"><span class="badge-sq">1</span><div><h2>À propos de la plateforme</h2><p>Ce que l'outil fait, et dans quel ordre</p></div></header>
+        <div class="sl-body center">
+          <p class="lead">La plateforme couvre l'avant-projet logistique en trois workflows enchaînés. Chaque exécution est enregistrée (fichier, paramètres, résultats) et se rouvre depuis l'historique.</p>
+          <div class="pipeline" style="margin-top: 18px;">
+            <div class="card top a-blue" style="min-height: 250px;"><div class="num" style="border-radius: 50%; width: 58px; height: 58px; font-size: 24px;">1</div><h3>Capacity Analysis</h3><p>Calcule les surfaces de stockage au sol et en palettiers à partir du classeur capacitaire.</p></div>
+            <i class="fas fa-caret-right chev"></i>
+            <div class="card top a-navy" style="min-height: 250px;"><div class="num" style="border-radius: 50%; width: 58px; height: 58px; font-size: 24px;">2</div><h3>Kitting Rack Dimensioning</h3><p>Cherche la largeur, la profondeur et le nombre de niveaux optimaux du meuble kitting.</p></div>
+            <i class="fas fa-caret-right chev"></i>
+            <div class="card top a-green" style="min-height: 250px;"><div class="num" style="border-radius: 50%; width: 58px; height: 58px; font-size: 24px;">3</div><h3>Kitting Rack Layout</h3><p>Place chaque référence dans les meubles kitting : plan d'implantation, vue 3D, Excel et DXF.</p></div>
+          </div>
+        </div>
+        <footer class="sl-foot"><span>Guide utilisateur - Smart Warehousing Platform · EL HOUARI ZAKARIA</span><span>3</span></footer>
+      </section>
+
+      <!-- 4 · Accès -->
+      <section class="slide" data-title="Accès & repères d'interface">
+        <header class="sl-head"><span class="badge-sq">2</span><div><h2>Accès &amp; repères d'interface</h2><p>Se connecter et s'orienter</p></div></header>
+        <div class="sl-body">
+          <div class="split">
+            <div>
+              <div class="steps">
+                <div class="st"><span class="dot">1</span><div><h4>Ouvrir la plateforme dans le navigateur</h4><p>Adresse fournie par l'équipe.</p></div></div>
+                <div class="st"><span class="dot">2</span><div><h4>Saisir l'e-mail professionnel</h4><p>Domaine autorisé requis, puis « Get a sign-in code ».</p></div></div>
+                <div class="st"><span class="dot">3</span><div><h4>Saisir le code à 6 chiffres</h4><p>Reçu par e-mail, puis « Sign in ».</p></div></div>
+                <div class="st"><span class="dot">4</span><div><h4>Naviguer via le menu latéral</h4><p>Home, les 3 workflows et « History » ; « Sign out » en bas.</p></div></div>
+              </div>
+              <div class="callout a-green"><h4>Bon à savoir</h4><p>Tout est enregistré en base, par utilisateur : fichiers, paramètres et résultats se retrouvent dans « History ».</p></div>
+            </div>
+            <div class="shots pair">
+              <img class="shot" src="assets/img/login-email.webp" alt="Écran de connexion : saisie de l'e-mail professionnel">
+              <img class="shot" src="assets/img/login-code.webp" alt="Écran de connexion : saisie du code reçu par e-mail">
+            </div>
+          </div>
+        </div>
+        <footer class="sl-foot"><span>Guide utilisateur - Smart Warehousing Platform · EL HOUARI ZAKARIA</span><span>4</span></footer>
+      </section>
+
+      <!-- 5 · Fichiers Excel -->
+      <section class="slide" data-title="Préparer les fichiers Excel">
+        <header class="sl-head"><span class="badge-sq">3</span><div><h2>Préparer les fichiers Excel</h2><p>Deux fichiers, des colonnes attendues</p></div></header>
+        <div class="sl-body" style="padding-top: 28px;">
+          <p class="lead" style="font-size: 16px; margin-bottom: 22px;">Chaque workflow propose son modèle (lien « Download the … template »). Les fichiers clients en français restent acceptés : la correspondance des colonnes s'affiche dans « Column mapping ».</p>
+          <div class="grid-2" style="gap: 26px;">
+            <div class="card a-blue" style="min-height: 330px;">
+              <h3>Classeur capacitaire - feuille « OUTPUT »</h3>
+              <p style="color: var(--muted);">Une ligne par référence à stocker.</p>
+              <ul class="chips-list">
+                <li><code>Références</code><code>Désignation</code><code>Typologie emballage</code></li>
+                <li><code>Longueur (mm)</code><code>Largeur (mm)</code><code>Hauteur (mm)</code><code>Gerbabilité</code></li>
+                <li><code>% Monte</code><code>Nbr de pièces (SNP)</code><code>Simul Nbr jours de stock</code></li>
+                <li class="opt"><code>Sol/Palettier (prioritaire)</code><code>Piles par file</code></li>
+              </ul>
+            </div>
+            <div class="card a-navy" style="min-height: 330px;">
+              <h3>Fichier d'affectation - feuille « Affectation »</h3>
+              <p style="color: var(--muted);">Une ligne par référence affectée à un poste (workflows 2 et 3).</p>
+              <ul class="chips-list">
+                <li><code>POSTE</code><code>Références</code><code>Désignation</code><code>Type Emballage</code></li>
+                <li><code>Longueur</code><code>Largeur</code><code>Hauteur</code><code>Nbr pcs/Emb</code><code>Coeff</code></li>
+                <li><code>Poids</code><code>Poids Réel</code><code>Taux de Monte</code></li>
+                <li class="opt"><code>Orientation</code><code>Nb couloirs</code><code>Couverture cible (min)</code></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <footer class="sl-foot"><span>Guide utilisateur - Smart Warehousing Platform · EL HOUARI ZAKARIA</span><span>5</span></footer>
+      </section>
+
+      <!-- 6 · Capacity Analysis -->
+      <section class="slide" data-title="Capacity Analysis">
+        <header class="sl-head"><span class="badge-sq">4</span><div><h2>Capacity Analysis</h2><p>Obtenir les surfaces au sol &amp; en palettiers</p></div></header>
+        <div class="sl-body">
+          <div class="split">
+            <div>
+              <div class="steps">
+                <div class="st"><span class="dot">1</span><div><h4>Charger le classeur capacitaire (OUTPUT)</h4><p>Glisser-déposer, ou réutiliser le fichier stocké.</p></div></div>
+                <div class="st"><span class="dot">2</span><div><h4>Choisir un jeu de paramètres</h4><p>Production, bâtiment, manutention, palettiers…</p></div></div>
+                <div class="st"><span class="dot">3</span><div><h4>Cliquer « Run Capacity Analysis »</h4><p>Résultat en quelques secondes, enregistré.</p></div></div>
+                <div class="st"><span class="dot">4</span><div><h4>Parcourir les 3 étapes</h4><p>Input Data · Capacity Engine · Surfaces &amp; KPI.</p></div></div>
+              </div>
+              <div class="callout a-gold"><h4>Résultat clé</h4><p>« Building utilisation » compare la surface majorée (« With overhead ») à la surface du bâtiment : elle indique si la zone tient dans l'enveloppe.</p></div>
+            </div>
+            <div class="shots"><img class="shot" src="assets/img/capacity-kpi.webp" alt="Capacity Analysis, étape Surfaces &amp; KPI"></div>
+          </div>
+        </div>
+        <footer class="sl-foot"><span>Guide utilisateur - Smart Warehousing Platform · EL HOUARI ZAKARIA</span><span>6</span></footer>
+      </section>
+
+      <!-- 7 · Kitting Rack Dimensioning -->
+      <section class="slide" data-title="Kitting Rack Dimensioning">
+        <header class="sl-head"><span class="badge-sq">5</span><div><h2>Kitting Rack Dimensioning</h2><p>Trouver le meuble kitting optimal</p></div></header>
+        <div class="sl-body">
+          <div class="split">
+            <div>
+              <div class="steps">
+                <div class="st"><span class="dot">1</span><div><h4>Charger le fichier d'affectation</h4><p>Feuille « Affectation », commune avec le Layout.</p></div></div>
+                <div class="st"><span class="dot">2</span><div><h4>Régler l'espace de recherche</h4><p>Search space, structure, ergonomie, scoring…</p></div></div>
+                <div class="st"><span class="dot">3</span><div><h4>Cliquer « Run Kitting Rack Dimensioning »</h4><p>Des centaines de configurations évaluées.</p></div></div>
+                <div class="st"><span class="dot">4</span><div><h4>Comparer au nominal</h4><p>Le bloc « Nominal vs optimal » chiffre le gain.</p></div></div>
+              </div>
+              <div class="callout a-green"><h4>Étape suivante</h4><p>« Use in Kitting Rack Layout » ouvre le Layout prérempli avec l'optimum ; « Excel report » exporte le détail.</p></div>
+            </div>
+            <div class="shots"><img class="shot" src="assets/img/dimensioning-optimum.webp" alt="Kitting Rack Dimensioning, étape Optimum &amp; Report"></div>
+          </div>
+        </div>
+        <footer class="sl-foot"><span>Guide utilisateur - Smart Warehousing Platform · EL HOUARI ZAKARIA</span><span>7</span></footer>
+      </section>
+
+      <!-- 8 · Kitting Rack Layout - Implantation -->
+      <section class="slide" data-title="Kitting Rack Layout - Implantation">
+        <header class="sl-head"><span class="badge-sq">6</span><div><h2>Kitting Rack Layout - Implantation</h2><p>Plan de localisation et ajustements</p></div></header>
+        <div class="sl-body">
+          <div class="split">
+            <div>
+              <div class="steps">
+                <div class="st"><span class="dot">1</span><div><h4>Cliquer « Run Kitting Rack Layout »</h4><p>Les références sont réparties dans les meubles.</p></div></div>
+                <div class="st"><span class="dot">2</span><div><h4>Consulter le plan de localisation</h4><p>Étape « Layout Engine » : côté, couloirs, couverture.</p></div></div>
+                <div class="st"><span class="dot">3</span><div><h4>Ajuster le côté ou les couloirs</h4><p>Puis « Recompute layout ».</p></div></div>
+                <div class="st"><span class="dot">4</span><div><h4>Contrôler les objectifs</h4><p>Remplissage et contraintes respectées.</p></div></div>
+              </div>
+              <div class="callout a-green"><h4>Bon à savoir</h4><p>Chaque recalcul crée une nouvelle exécution sur le même fichier : l'original reste dans l'historique.</p></div>
+            </div>
+            <div class="shots" style="justify-content: center;"><img class="shot" src="assets/img/layout-plan-editor.webp" alt="Plan de localisation avec ajustement des couloirs et du côté"></div>
+          </div>
+        </div>
+        <footer class="sl-foot"><span>Guide utilisateur - Smart Warehousing Platform · EL HOUARI ZAKARIA</span><span>8</span></footer>
+      </section>
+
+      <!-- 9 · Kitting Rack Layout - 3D & KPI -->
+      <section class="slide" data-title="Kitting Rack Layout - 3D & KPI">
+        <header class="sl-head"><span class="badge-sq">6</span><div><h2>Kitting Rack Layout - 3D &amp; KPI</h2><p>Visualiser et exporter l'implantation</p></div></header>
+        <div class="sl-body">
+          <div class="split">
+            <div>
+              <div class="steps">
+                <div class="st"><span class="dot">1</span><div><h4>Ouvrir l'étape « 3D Layout &amp; KPI »</h4><p>Surface, volume, remplissage, couverture.</p></div></div>
+                <div class="st"><span class="dot">2</span><div><h4>Explorer la vue 3D</h4><p>Couleur par référence, poste, côté ou poids.</p></div></div>
+                <div class="st"><span class="dot">3</span><div><h4>Sélectionner un meuble</h4><p>« 2D section » ou « 3D view » cotée.</p></div></div>
+                <div class="st"><span class="dot">4</span><div><h4>Régler allée et écart</h4><p>Puis « Update view » : surface au sol recalculée.</p></div></div>
+              </div>
+              <div class="callout a-blue"><h4>Exports disponibles</h4><p>Plan de localisation Excel (avec coupes 2D) et fichier DXF pour AutoCAD.</p></div>
+            </div>
+            <div class="shots" style="flex-direction: row; gap: 14px; align-items: flex-start; justify-content: flex-end;">
+              <img class="shot" style="width: 52%;" src="assets/img/layout-3d.webp" alt="Vue 3D de l'implantation des meubles kitting">
+              <img class="shot" style="width: 46%; margin-top: 150px;" src="assets/img/rack-3d.webp" alt="Vue 3D cotée d'un meuble kitting">
+            </div>
+          </div>
+        </div>
+        <footer class="sl-foot"><span>Guide utilisateur - Smart Warehousing Platform · EL HOUARI ZAKARIA</span><span>9</span></footer>
+      </section>
+
+      <!-- 10 · Historique -->
+      <section class="slide" data-title="Historique & jeux de paramètres">
+        <header class="sl-head"><span class="badge-sq">7</span><div><h2>Historique &amp; jeux de paramètres</h2><p>Retrouver, rejouer, réutiliser</p></div></header>
+        <div class="sl-body">
+          <div class="split">
+            <div>
+              <div class="steps">
+                <div class="st"><span class="dot">1</span><div><h4>Ouvrir « History »</h4><p>Exécutions filtrables par workflow et statut.</p></div></div>
+                <div class="st"><span class="dot">2</span><div><h4>Rouvrir une exécution</h4><p>« Open » : résultats et exports régénérés.</p></div></div>
+                <div class="st"><span class="dot">3</span><div><h4>Rejouer avec des changements</h4><p>« Run again with changes » : fichier et paramètres repris.</p></div></div>
+                <div class="st"><span class="dot">4</span><div><h4>Enregistrer un jeu de paramètres</h4><p>« Save as set » ; vos dernières valeurs sont mémorisées.</p></div></div>
+              </div>
+              <div class="callout a-green"><h4>Bon à savoir</h4><p>Chaque utilisateur ne voit que ses propres exécutions, fichiers et jeux de paramètres.</p></div>
+            </div>
+            <div class="shots">
+              <img class="shot" src="assets/img/history.webp" alt="Page History : liste des exécutions">
+              <img class="shot" src="assets/img/launcher.webp" alt="Lanceur de run : fichier stocké réutilisé et jeu de paramètres">
+            </div>
+          </div>
+        </div>
+        <footer class="sl-foot"><span>Guide utilisateur - Smart Warehousing Platform · EL HOUARI ZAKARIA</span><span>10</span></footer>
+      </section>
+
+      <!-- 11 · Exports -->
+      <section class="slide" data-title="Exports & livrables">
+        <header class="sl-head"><span class="badge-sq">7</span><div><h2>Exports &amp; livrables</h2><p>Ce que vous pouvez produire</p></div></header>
+        <div class="sl-body center">
+          <div class="rows">
+            <div class="row-card a-blue"><h4><i class="fas fa-chart-area"></i>&nbsp; Capacity Analysis</h4><p>Rapport Excel des surfaces · tableaux filtrables à l'écran.</p></div>
+            <div class="row-card a-navy"><h4><i class="fas fa-ruler-combined"></i>&nbsp; Kitting Rack Dimensioning</h4><p>Rapport Excel détaillé (configurations, références).</p></div>
+            <div class="row-card a-green"><h4><i class="fas fa-cubes"></i>&nbsp; Kitting Rack Layout</h4><p>Plan de localisation Excel (avec coupes 2D) · DXF AutoCAD.</p></div>
+            <div class="row-card a-blue"><h4><i class="fas fa-clock-rotate-left"></i>&nbsp; Historique</h4><p>Exports régénérés à la demande depuis toute exécution passée.</p></div>
+            <div class="row-card future a-gold"><h4><i class="fas fa-wand-magic-sparkles"></i>&nbsp; À venir · IA générative</h4><p>CDC et analyse fournisseurs : agents / apps d'IA générative, selon l'environnement ou la licence client.</p></div>
+          </div>
+        </div>
+        <footer class="sl-foot"><span>Guide utilisateur - Smart Warehousing Platform · EL HOUARI ZAKARIA</span><span>11</span></footer>
+      </section>
+
+      <!-- 12 · Dépannage & glossaire -->
+      <section class="slide" data-title="Dépannage & glossaire">
+        <header class="sl-head"><span class="badge-sq">8</span><div><h2>Dépannage &amp; glossaire</h2><p>Problèmes courants et termes métier</p></div></header>
+        <div class="sl-body center">
+          <div class="grid-2" style="gap: 60px;">
+            <div class="faq">
+              <h3><i class="fas fa-screwdriver-wrench"></i>&nbsp; Problèmes courants</h3>
+              <dl>
+                <div><dt>« Colonnes manquantes »</dt><dd>Repartir du modèle Excel et vérifier les en-têtes.</dd></div>
+                <div><dt>Exécution « failed »</dt><dd>Le message reste dans l'historique : corriger le fichier, relancer.</dd></div>
+                <div><dt>Code de connexion refusé</dt><dd>Code expiré ou trop d'essais : en redemander un.</dd></div>
+                <div><dt>Résultats disparus</dt><dd>Ils sont en base : les retrouver dans « History ».</dd></div>
+              </dl>
+            </div>
+            <div class="faq glossary">
+              <h3><i class="fas fa-book"></i>&nbsp; Glossaire</h3>
+              <dl>
+                <div><dt>Couverture</dt><dd>Durée d'autonomie d'une référence (jours-heures-minutes).</dd></div>
+                <div><dt>Couloir</dt><dd>Colonne d'un meuble dédiée à une référence (« lane »).</dd></div>
+                <div><dt>Nominal vs optimal</dt><dd>Config de référence comparée à la config calculée.</dd></div>
+                <div><dt>Jeu de paramètres</dt><dd>Valeurs enregistrées et réutilisables (« parameter set »).</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <footer class="sl-foot"><span>Guide utilisateur - Smart Warehousing Platform · EL HOUARI ZAKARIA</span><span>12</span></footer>
+      </section>
+
+    </div>
+    <p class="hint">← → pour naviguer · F plein écran</p>
+  </main>
+
+  <script src="assets/js/deck.js"></script>
+</body>
+</html>

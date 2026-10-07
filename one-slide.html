@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One-slide · Smart Warehousing Platform v5.1</title>
+  <meta name="description" content="La Smart Warehousing Platform v5.1 en une slide, en français et en anglais.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/deck.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" title="Toutes les présentations">
+      <span class="brand-mark"><i class="fas fa-warehouse"></i></span>
+      <span>SWP v5.1<small>Présentations</small></span>
+    </a>
+    <nav class="deck-tabs" aria-label="Présentations">
+      <a href="details.html">Présentation détaillée</a>
+      <a href="one-slide.html" aria-current="page">One-slide</a>
+      <a href="guide.html">Guide utilisateur</a>
+    </nav>
+    <div class="controls">
+      <button class="ctl" id="menuBtn" aria-haspopup="true" aria-expanded="false" title="Liste des slides"><i class="fas fa-list"></i></button>
+      <button class="ctl" id="prevBtn" title="FR" aria-label="Version française"><i class="fas fa-chevron-left"></i></button>
+      <span class="counter" id="counter" aria-live="polite">1 / 2</span>
+      <button class="ctl" id="nextBtn" title="EN" aria-label="English version"><i class="fas fa-chevron-right"></i></button>
+      <button class="ctl" id="printBtn" title="Imprimer / PDF"><i class="fas fa-file-pdf"></i></button>
+      <button class="ctl" id="fullBtn" title="Plein écran (F)"><i class="fas fa-expand"></i></button>
+    </div>
+    <nav class="slide-menu" id="slideMenu" hidden aria-label="Slides"></nav>
+    <div class="progress" id="progress"></div>
+  </header>
+
+  <main class="viewport">
+    <div class="stage">
+
+      <!-- Version française -->
+      <section class="slide os" data-title="Version française" lang="fr">
+        <div class="os-title">
+          <h1>SMART WAREHOUSING PLATFORM :</h1>
+          <p>Un outil pour dimensionner et <span class="mint">automatiser</span> le kitting en avant-projet logistique, de l'allocation au plan d'implantation</p>
+        </div>
+        <div class="os-band">Contexte</div>
+        <div class="os-grid top">
+          <div class="os-panel os-top">
+            <h4>Notre mission (équipe AVP Supply Chain)</h4>
+            <ul>
+              <li>-&nbsp; Dimensionner les zones de stockage et les meubles de kitting</li>
+              <li>-&nbsp; Produire le plan d'implantation et le cahier des charges</li>
+              <li>-&nbsp; Objectiver le choix fournisseur pour la revue achat</li>
+              <li>-&nbsp; Missions réalisées pour <b>Stellantis Kénitra</b></li>
+            </ul>
+          </div>
+          <div class="os-panel os-top">
+            <h4>Process actuel</h4>
+            <ul><li>-&nbsp; Dimensionnement, plan d'implantation et cahier des charges réalisés <span class="gold">à la main sous Excel</span>.</li></ul>
+            <h4 class="lim">Limitation :</h4>
+            <ul>
+              <li class="sub">&gt;&nbsp; Calculs longs et répétitifs, résultat non standardisé d'un ingénieur à l'autre.</li>
+              <li class="sub">&gt;&nbsp; Plan d'implantation, CDC et comparaison fournisseurs : livrables produits séparément, hypothèses peu traçables.</li>
+            </ul>
+          </div>
+          <div class="os-band">Challenges : complexité métier</div>
+          <div class="os-band">Nouvelle solution : Smart Warehousing Platform</div>
+          <div class="os-panel os-bottom">
+            <ul>
+              <li>-&nbsp; <b>Contraintes ergonomiques</b> : hauteur max meuble, poids max par bac, niveaux accessibles.</li>
+              <li>-&nbsp; <b>Orientation et implantation</b> : Grand Côté / Petit Côté, ratio profondeur/largeur, gabarit du site.</li>
+              <li class="sub">&gt;&nbsp; <span class="yellow">Groupes dédiés par poste</span> : un meuble ne mélange jamais deux postes.</li>
+              <li class="sub">&gt;&nbsp; <span class="yellow">Références lourdes</span> restreintes aux niveaux bas (ergonomie opérateur).</li>
+              <li class="sub">&gt;&nbsp; <span class="yellow">Couverture de réapprovisionnement</span> par référence et par poste.</li>
+              <li>-&nbsp; <b>Volume</b> : plusieurs milliers de références par site, des centaines de combinaisons de dimensionnement à évaluer.</li>
+            </ul>
+          </div>
+          <div class="os-panel os-bottom">
+            <ul>
+              <li>-&nbsp; Pipeline unique : analyse capacitaire, dimensionnement et implantation des meubles kitting, avec historique des études.</li>
+              <li>-&nbsp; Algorithme de placement automatique (bin-packing) respectant toutes les règles métier.</li>
+              <li>-&nbsp; À venir : CDC et analyse fournisseurs par IA générative (agents / apps), selon l'environnement ou la licence client.</li>
+            </ul>
+            <h4 class="mint" style="margin-top: 16px;">Impact mesuré :</h4>
+            <ul>
+              <li class="big">-&nbsp; <b>8x plus rapide</b> sur le dimensionnement meuble (135 VS 17 min sur un cas à 10 meubles)</li>
+              <li class="big">-&nbsp; <b>Historique complet</b> : chaque étude se rouvre et se rejoue à l'identique</li>
+              <li class="big">-&nbsp; <b>Pipeline complet quasi instantané</b>, de l'analyse capacitaire à la vue 3D</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- English version -->
+      <section class="slide os" data-title="English version" lang="en">
+        <div class="os-title">
+          <h1>SMART WAREHOUSING PLATFORM:</h1>
+          <p>A tool to size and <span class="mint">automate</span> kitting in logistics pre-project studies, from allocation to rack layout</p>
+        </div>
+        <div class="os-band">Context</div>
+        <div class="os-grid top">
+          <div class="os-panel os-top">
+            <h4>Our mission (AVP Supply Chain team)</h4>
+            <ul>
+              <li>-&nbsp; Size storage areas and kitting racks</li>
+              <li>-&nbsp; Produce the layout plan and the specifications document</li>
+              <li>-&nbsp; Objectify supplier selection for the purchasing review</li>
+              <li>-&nbsp; Missions delivered for <b>Stellantis Kenitra</b></li>
+            </ul>
+          </div>
+          <div class="os-panel os-top">
+            <h4>Current process</h4>
+            <ul><li>-&nbsp; Sizing, layout plan and specifications document are done <span class="gold">by hand in Excel</span>.</li></ul>
+            <h4 class="lim">Limitation:</h4>
+            <ul>
+              <li class="sub">&gt;&nbsp; Long, repetitive calculations, results not standardized from one engineer to another.</li>
+              <li class="sub">&gt;&nbsp; Layout plan, specifications and supplier comparison: deliverables produced separately, assumptions barely traceable.</li>
+            </ul>
+          </div>
+          <div class="os-band">Challenges: business complexity</div>
+          <div class="os-band">New solution: Smart Warehousing Platform</div>
+          <div class="os-panel os-bottom">
+            <ul>
+              <li>-&nbsp; <b>Ergonomic constraints</b>: max rack height, max bin weight, accessible levels.</li>
+              <li>-&nbsp; <b>Orientation and layout</b>: long side / short side, depth-to-width ratio, site envelope.</li>
+              <li class="sub">&gt;&nbsp; <span class="yellow">Dedicated groups per workstation</span>: a rack never mixes two workstations.</li>
+              <li class="sub">&gt;&nbsp; <span class="yellow">Heavy references</span> restricted to the lower levels (operator ergonomics).</li>
+              <li class="sub">&gt;&nbsp; <span class="yellow">Replenishment coverage</span> per reference and per workstation.</li>
+              <li>-&nbsp; <b>Scale</b>: several thousand references per site, hundreds of sizing combinations to evaluate.</li>
+            </ul>
+          </div>
+          <div class="os-panel os-bottom">
+            <ul>
+              <li>-&nbsp; Single pipeline: capacity analysis, kitting rack dimensioning and layout, with a history of every study.</li>
+              <li>-&nbsp; Automated placement algorithm (bin-packing) enforcing all business rules.</li>
+              <li>-&nbsp; Coming next: specifications and supplier analysis with generative AI (agents / apps), subject to the client's environment or licence.</li>
+            </ul>
+            <h4 class="mint" style="margin-top: 16px;">Measured impact:</h4>
+            <ul>
+              <li class="big">-&nbsp; <b>8x faster</b> on rack sizing (135 VS 17 min on a 10-rack case)</li>
+              <li class="big">-&nbsp; <b>Full history</b>: every study reopens and reruns with its file and parameters</li>
+              <li class="big">-&nbsp; <b>Near-instant full pipeline</b>, from capacity analysis to the 3D view</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <p class="hint">← FR · EN → · F plein écran</p>
+  </main>
+
+  <script src="assets/js/deck.js"></script>
+</body>
+</html>

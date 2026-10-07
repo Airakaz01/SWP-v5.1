@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Présentation détaillée · Smart Warehousing Platform v5.1</title>
+  <meta name="description" content="Bilan de projet v5.1 de la Smart Warehousing Platform : contexte, utilisation et gains.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/deck.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" title="Toutes les présentations">
+      <span class="brand-mark"><i class="fas fa-warehouse"></i></span>
+      <span>SWP v5.1<small>Présentations</small></span>
+    </a>
+    <nav class="deck-tabs" aria-label="Présentations">
+      <a href="details.html" aria-current="page">Présentation détaillée</a>
+      <a href="one-slide.html">One-slide</a>
+      <a href="guide.html">Guide utilisateur</a>
+    </nav>
+    <div class="controls">
+      <button class="ctl" id="menuBtn" aria-haspopup="true" aria-expanded="false" title="Liste des slides"><i class="fas fa-list"></i></button>
+      <button class="ctl" id="prevBtn" title="Précédente (←)" aria-label="Slide précédente"><i class="fas fa-chevron-left"></i></button>
+      <span class="counter" id="counter" aria-live="polite">1 / 10</span>
+      <button class="ctl" id="nextBtn" title="Suivante (→)" aria-label="Slide suivante"><i class="fas fa-chevron-right"></i></button>
+      <button class="ctl" id="printBtn" title="Imprimer / PDF"><i class="fas fa-file-pdf"></i></button>
+      <button class="ctl" id="fullBtn" title="Plein écran (F)"><i class="fas fa-expand"></i></button>
+    </div>
+    <nav class="slide-menu" id="slideMenu" hidden aria-label="Slides"></nav>
+    <div class="progress" id="progress"></div>
+  </header>
+
+  <main class="viewport">
+    <div class="stage">
+
+      <!-- 1 · Couverture -->
+      <section class="slide cover" data-title="Smart Warehousing Platform">
+        <div class="cover-inner">
+          <h1>SMART WAREHOUSING PLATFORM</h1>
+          <p class="sub">Bilan de projet v5.1 - contexte, utilisation et gains</p>
+          <p class="tagline">De l'allocation au plan d'implantation kitting - en quelques minutes</p>
+        </div>
+        <div class="cover-rule"></div>
+        <div class="cover-by">
+          <strong>Zakaria EL HOUARI - Associate Data Engineer</strong>
+          <span>Capgemini Engineering - Maroc · Client Stellantis Kénitra</span>
+        </div>
+      </section>
+
+      <!-- 2 · Contexte -->
+      <section class="slide" data-title="Contexte global">
+        <header class="sl-head"><div><h2>Contexte global</h2><p>Le kitting en avant-projet logistique</p></div></header>
+        <div class="sl-body">
+          <p class="lead">Capgemini Engineering Maroc, service Supply Chain, réalise des missions d'avant-projet (AVP) logistique pour Stellantis Kénitra : 60 véh/h, 22,5 h de production par jour.</p>
+          <div class="grid-2" style="grid-auto-rows: 168px;">
+            <div class="card a-blue"><h3>Qu'est-ce que le kitting ?</h3><p>Des meubles préparés en amont des postes de montage : les références sont groupées par poste et livrées prêtes à l'emploi en bord de ligne.</p></div>
+            <div class="card a-gold"><h3>L'enjeu du dimensionnement</h3><p>Trouver le juste dimensionnement des meubles : ni rupture d'approvisionnement poste, ni surface d'entrepôt gaspillée.</p></div>
+            <div class="card a-red"><h3>Un processus resté manuel</h3><p>Dimensionnement empirique sous Excel, CDC rédigé à la main (plusieurs jours), analyse d'offres fournisseurs manuelle (demi-journée par appel d'offres).</p></div>
+            <div class="card a-navy"><h3>La question posée au projet</h3><p>Comment transformer ce processus manuel en une chaîne automatisée, optimale et traçable, sans changer les fichiers Excel utilisés sur le terrain ?</p></div>
+          </div>
+        </div>
+        <footer class="sl-foot"><span>Smart Warehousing Platform - Capgemini Engineering Maroc · Pour Stellantis</span><span>2</span></footer>
+      </section>
+
+      <!-- 3 · Notre réponse -->
+      <section class="slide" data-title="Notre réponse">
+        <header class="sl-head"><div><h2>Notre réponse</h2><p>Un pipeline unique, de l'allocation au plan d'implantation kitting</p></div></header>
+        <div class="sl-body center">
+          <div class="pipeline">
+            <div class="card top a-blue"><div class="num">1</div><h3>Capacity<br>Analysis</h3><p>Surfaces sol<br>&amp; palettiers</p></div>
+            <i class="fas fa-caret-right chev"></i>
+            <div class="card top a-navy"><div class="num">2</div><h3>Kitting Rack<br>Dimensioning</h3><p>Meuble kitting optimal,<br>comparé au nominal</p></div>
+            <i class="fas fa-caret-right chev"></i>
+            <div class="card top a-green"><div class="num">3</div><h3>Kitting Rack<br>Layout</h3><p>Plan d'implantation, vue 3D,<br>exports Excel &amp; DXF</p></div>
+          </div>
+          <p class="caption" style="margin-top: 36px;">Les données circulent d'un domaine à l'autre automatiquement - chaque exécution est conservée avec son fichier et ses paramètres.</p>
+        </div>
+        <footer class="sl-foot"><span>Smart Warehousing Platform - Capgemini Engineering Maroc · Pour Stellantis</span><span>3</span></footer>
+      </section>
+
+      <!-- 4 · Utilisation -->
+      <section class="slide" data-title="Utilisation">
+        <header class="sl-head"><div><h2>Utilisation</h2><p>Trois workflows enchaînés, du fichier d'allocation au plan d'implantation</p></div></header>
+        <div class="sl-body" style="padding-top: 38px;">
+          <div class="grid-2" style="grid-auto-rows: 162px; gap: 24px 28px;">
+            <div class="card a-blue"><h3>1.&nbsp; Capacity Analysis</h3><p>Charge le classeur capacitaire du site, calcule les surfaces au sol et en palettiers et le taux d'utilisation du bâtiment en quelques secondes.</p></div>
+            <div class="card a-navy"><h3>2.&nbsp; Kitting Rack Dimensioning</h3><p>Cherche la largeur, la profondeur et le nombre de niveaux optimaux du meuble kitting et chiffre le gain face au meuble nominal.</p></div>
+            <div class="card a-green"><h3>3.&nbsp; Kitting Rack Layout</h3><p>Place chaque référence dans les meubles kitting : plan d'implantation ajustable, vue 3D, exports Excel et DXF AutoCAD.</p></div>
+            <div class="card a-gold"><span class="tag">À venir</span><h3>Modules IA générative</h3><p>Rédaction du cahier des charges et analyse des offres fournisseurs : à développer dès que l'environnement ou la licence client le permet (agents / apps d'IA générative).</p></div>
+          </div>
+          <div class="notice" style="margin-top: 24px;">
+            <h3>Guide utilisateur complet disponible</h3>
+            <p>Pas à pas illustré des 3 workflows, historique, préparation des fichiers Excel, exports et dépannage : <a href="guide.html" style="color: var(--blue); font-weight: 600;">ouvrir le guide utilisateur</a>.</p>
+          </div>
+        </div>
+        <footer class="sl-foot"><span>Smart Warehousing Platform - Capgemini Engineering Maroc · Pour Stellantis</span><span>4</span></footer>
+      </section>
+
+      <!-- 5 · Avant / après -->
+      <section class="slide" data-title="État avant / après">
+        <header class="sl-head"><div><h2>État avant / après</h2><p>Gain de temps mesuré sur le dimensionnement des meubles</p></div></header>
+        <div class="sl-body center">
+          <div class="ba">
+            <div class="card top a-red">
+              <h3>AVANT · processus manuel</h3>
+              <div class="ba-item"><strong>Saisie manuelle des données</strong><span>Fichier Excel brut - 15 min</span></div>
+              <div class="ba-item"><strong>Conception meuble manuelle</strong><span>Règles poids/dimension au jugement - 12 min × N meubles</span></div>
+              <div class="ba-item"><strong>Contrôle + corrections</strong><span>Boucle d'erreurs, livraison non structurée - retours fréquents</span></div>
+              <p class="total">TOTAL : 15 + 12 × N min<small>croît avec le nombre de meubles</small></p>
+            </div>
+            <i class="fas fa-arrow-right chev"></i>
+            <div class="card top a-green">
+              <h3>APRÈS · Smart Warehousing Platform</h3>
+              <div class="ba-item"><strong>Saisie feuille INPUT</strong><span>Fichier .xlsx / .xlsm inchangé - 15 min</span></div>
+              <div class="ba-item"><strong>Valider &amp; exporter</strong><span>1 clic, macro automatique - ~1 min</span></div>
+              <div class="ba-item"><strong>Optimisation FFD + schémas + export</strong><span>Plateforme, fichier de sortie prêt - ~1 min</span></div>
+              <p class="total">TOTAL : ~17 min (FIXE)<small>indépendant du nombre de meubles</small></p>
+            </div>
+          </div>
+          <p class="ba-foot">Sur un cas à 10 meubles : 135 min → 17 min, soit environ 8× plus rapide - et l'écart se creuse avec le nombre de meubles.</p>
+        </div>
+        <footer class="sl-foot"><span>Smart Warehousing Platform - Capgemini Engineering Maroc · Pour Stellantis</span><span>5</span></footer>
+      </section>
+
+      <!-- 6 · Chiffres mesurés -->
+      <section class="slide" data-title="Chiffres mesurés">
+        <header class="sl-head"><div><h2>Chiffres mesurés</h2><p>Sur les données réelles du site - poste i5-8365U, 8 Go RAM, sans GPU</p></div></header>
+        <div class="sl-body center">
+          <div class="grid-3" style="gap: 26px;">
+            <div class="card top a-green stat"><div class="big">&lt; 4 s</div><h4>Pipeline complet</h4><p>Les 3 workflows : de l'analyse capacitaire à la vue 3D</p></div>
+            <div class="card top a-gold stat"><div class="big">0,06 - 0,8 s</div><h4>Recherche de dimensionnement</h4><p>Des centaines de configurations de meuble évaluées sur les fichiers réels</p></div>
+            <div class="card top a-navy stat"><div class="big">337 tests</div><h4>Suite de validation</h4><p>Gate bloquant en intégration continue · 96 % de couverture, parité des calculs vérifiée</p></div>
+          </div>
+        </div>
+        <footer class="sl-foot"><span>Smart Warehousing Platform - Capgemini Engineering Maroc · Pour Stellantis</span><span>6</span></footer>
+      </section>
+
+      <!-- 7 · Évolution -->
+      <section class="slide" data-title="Évolution du projet">
+        <header class="sl-head"><div><h2>Évolution du projet</h2><p>Trois versions, une même base métier consolidée</p></div></header>
+        <div class="sl-body center">
+          <div class="evo">
+            <div class="card top a-blue"><span class="ver">v3</span><h3>Logique de placement affinée</h3><p>Orientation Grand Côté par défaut, gestion des couloirs par l'ingénieur, couverture calculée en sortie plutôt qu'en entrée.</p></div>
+            <i class="fas fa-caret-right chev"></i>
+            <div class="card top a-navy"><span class="ver">v4</span><h3>FastAPI + React - industrialisation</h3><p>Même moteur métier, interface modernisée en domaines, déploiement Azure avec CI/CD.</p></div>
+            <i class="fas fa-caret-right chev"></i>
+            <div class="card top a-green"><span class="ver">v5.1</span><h3>Version interne - persistance</h3><p>Cœur métier v6 en anglais, base PostgreSQL : fichiers, paramètres et résultats conservés par utilisateur, historique des exécutions. Version présentée aujourd'hui.</p></div>
+          </div>
+          <p class="caption" style="margin-top: 28px;">Le moteur de placement (règles, algorithme FFD) donne les mêmes résultats de v3 à v5.1 - parité vérifiée par tests ; l'interface et la persistance ont évolué.</p>
+        </div>
+        <footer class="sl-foot"><span>Smart Warehousing Platform - Capgemini Engineering Maroc · Pour Stellantis</span><span>7</span></footer>
+      </section>
+
+      <!-- 8 · Livrable industrialisé -->
+      <section class="slide" data-title="Un livrable industrialisé">
+        <header class="sl-head"><div><h2>Un livrable industrialisé</h2><p>Pas un prototype - une plateforme testée, sécurisée et persistante</p></div></header>
+        <div class="sl-body" style="padding-top: 44px;">
+          <div class="grid-2" style="grid-auto-rows: 178px; gap: 26px 28px;">
+            <div class="card a-green"><h3><i class="fas fa-file-circle-check" style="color: var(--green);"></i>&nbsp; Contrôle des données entrantes</h3><p>Si un fichier Excel est incomplet, l'utilisateur reçoit un message clair et peut télécharger le modèle. Les fichiers clients en français restent acceptés.</p></div>
+            <div class="card a-blue"><h3><i class="fas fa-lock" style="color: var(--blue);"></i>&nbsp; Accès sécurisé</h3><p>Authentification par code à usage unique envoyé sur l'e-mail professionnel. Seuls les domaines autorisés (Capgemini, Stellantis) peuvent se connecter.</p></div>
+            <div class="card a-navy"><h3><i class="fas fa-code-branch" style="color: var(--navy);"></i>&nbsp; Intégration continue</h3><p>GitHub Actions : chaque modification passe par 337 tests automatisés, sur une vraie base PostgreSQL, avant d'être intégrée.</p></div>
+            <div class="card a-gold"><h3><i class="fas fa-database" style="color: var(--gold);"></i>&nbsp; Persistance &amp; historique</h3><p>Fichiers, paramètres et résultats sont conservés en base, par utilisateur. Chaque étude se rouvre depuis l'historique et les jeux de paramètres se réutilisent.</p></div>
+          </div>
+        </div>
+        <footer class="sl-foot"><span>Smart Warehousing Platform - Capgemini Engineering Maroc · Pour Stellantis</span><span>8</span></footer>
+      </section>
+
+      <!-- 9 · Valeur -->
+      <section class="slide" data-title="La valeur pour l'affaire">
+        <header class="sl-head"><div><h2>La valeur pour l'affaire</h2><p>Temps, standardisation, traçabilité, différenciation</p></div></header>
+        <div class="sl-body" style="padding-top: 40px;">
+          <div class="grid-2" style="grid-auto-rows: 194px; gap: 28px;">
+            <div class="card filled"><h3><i class="fas fa-stopwatch"></i>&nbsp; Temps</h3><p>Le dimensionnement passe d'un temps qui croît avec le nombre de meubles à un temps fixe d'environ 17 minutes - facteur 8 mesuré sur un cas à 10 meubles.</p></div>
+            <div class="card filled"><h3><i class="fas fa-ruler-combined"></i>&nbsp; Standardisation</h3><p>Même méthode, mêmes hypothèses, mêmes livrables d'une affaire à l'autre - quel que soit l'ingénieur qui la conduit.</p></div>
+            <div class="card filled"><h3><i class="fas fa-clock-rotate-left"></i>&nbsp; Traçabilité</h3><p>Chaque exécution est historisée avec son fichier et ses paramètres : la configuration retenue, le gain chiffré et les hypothèses se retrouvent et se rejouent.</p></div>
+            <div class="card filled"><h3><i class="fas fa-star"></i>&nbsp; Différenciation</h3><p>Un avant-projet avec meuble optimal, plan d'implantation 3D et export AutoCAD générés en une session, c'est un niveau de maturité visible pour le client.</p></div>
+          </div>
+        </div>
+        <footer class="sl-foot"><span>Smart Warehousing Platform - Capgemini Engineering Maroc · Pour Stellantis</span><span>9</span></footer>
+      </section>
+
+      <!-- 10 · Conclusion -->
+      <section class="slide cover closing" data-title="Conclusion">
+        <div class="cover-inner" style="top: 196px;">
+          <h1>Un processus manuel devenu<br>un pipeline automatisé, optimal et traçable.</h1>
+          <div class="chips">
+            <span>Capacity Analysis</span><span>Kitting Rack Dimensioning</span><span>Kitting Rack Layout</span><span>Historique</span>
+          </div>
+        </div>
+        <div class="cover-rule" style="top: 498px;"></div>
+        <div class="cover-by" style="top: 534px;">
+          <strong>Merci de votre attention</strong>
+          <span>Zakaria EL HOUARI · Capgemini Engineering - Maroc</span>
+        </div>
+      </section>
+
+    </div>
+    <p class="hint">← → pour naviguer · F plein écran</p>
+  </main>
+
+  <script src="assets/js/deck.js"></script>
+</body>
+</html>
